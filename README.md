@@ -6,7 +6,7 @@
 </p>
 
 ## Installation
-1. Download the .zip file here.
+1. [Download the .zip file here.](https://github.com/HeyItsJono/Tinker/releases/latest)
 2. Extract it to the 3ds folder on your SD Card; the path should look like this: `/3ds/Tinker/`
 3. Place your themes in a Themes folder at the __root__ of your SD Card, just like you would for CHMM2. Themes should each have their own folder with their contents in them like so:
    

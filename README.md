@@ -17,6 +17,8 @@
    ```
   
    (Theme1, Theme2, etc are just examples of theme names, your theme folders can be named anything, as long as they are in /Themes/)
+   
+   __NOTE:__ If you have a Japanese 3DS console, there is a bug in the 3dsx file which stops Tinker from running. You'll need to [download 15avaughn's patched Tinker.3dsx file](http://www.mediafire.com/download/ble1n455ao2haoh/Tinker.3dsx) and replace /3ds/Tinker/Tinker.3dsx with that patched Tinker.3dsx. Furthermore, launching 3dsx files doesn't work either, meaning after you press A to install a theme from the popup, you need to manually exit out of Tinker, enter Menuhax Manager and select Install Theme. These problems are only present on Japanese 3DS's.
 
 ## Usage Guide
 * Browse the available themes on the bottom screen using the DPad arrow keys.
@@ -43,4 +45,5 @@
 
 ## Credits
 * [Rinnegatamante](https://gbatemp.net/members/rinnegatamante.356821/) for lpp-3ds and also for their incredible work on CHMM2 and Sunshell. Without all of those things this project would not be possible.
-* [ihaveamac](https://gbatemp.net/members/ihaveamac.364799/) for guidance and support in getting features like .3dsx launching working/
+* [ihaveamac](https://gbatemp.net/members/ihaveamac.364799/) for guidance and support in getting features like .3dsx launching working.
+* [15avaughn](https://gbatemp.net/members/15avaughn.376361/) for his patched Tinker.3dsx file which works on Japanese consoles.

@@ -32,6 +32,10 @@
 * __If you have a very large number of themes then the app will likely hang at a black screen on start up for a long time as it loads them all__
 
 ## Changelog
+* v1.0.2 (3/1/16)
+  * Introduced proper error dialogue for when Tinker detects Menuhax Manager is not installed, rather than having it throw a Lua-style error.
+  * Added banners for use with Masher's Gridlauncher (a standard one which is used by default, and a 3dsflow one which can be used by renaming the standard one to something else, and renaming the 3dsflow one to "Tinker-banner-fullscreen.png")
+  * Added a .3ds file - this has not been tested at all, I have no idea if it works or what it does. I don't have any means of testing it currently.
 * v1.0.1 (1/1/16)
   * Introduced proper error dialogue for when no themes are detected, rather than having it throw a Lua-style error.
 * v1.0.0 (31/12/15)

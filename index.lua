@@ -1,4 +1,4 @@
-if System.doesFileExist('/3ds/menuhax_manager/menuhax_manager.3dsx') ~= true then error("Menuhax Manager is not installed.") end
+-- if System.doesFileExist('/3ds/menuhax_manager/menuhax_manager.3dsx') ~= true then error("Menuhax Manager is not installed.") end
 -- error(System.currentDirectory())
 colours = {
 	white = Color.new(255,255,255),
@@ -24,6 +24,7 @@ prev_icon = Graphics.loadImage(System.currentDirectory()..'/prev_icon.png')
 no_icon = Graphics.loadImage(System.currentDirectory()..'/no_icon.png')
 install_dialog = Graphics.loadImage(System.currentDirectory()..'/install_dialog.png')
 no_themes_dialog = Graphics.loadImage(System.currentDirectory()..'/no_themes_dialog.png')
+no_menuhax_dialog = Graphics.loadImage(System.currentDirectory()..'/no_menuhax_dialog.png')
 console = Console.new(TOP_SCREEN)
 cursor_pos = 1
 current_page = 1
@@ -300,15 +301,20 @@ while true do
 		Timer.reset(preview_timer)
 	end
 	Graphics.initBlend(TOP_SCREEN)
-	if #themes ~= 0 then
+	if #themes ~= 0 and System.doesFileExist('/3ds/menuhax_manager/menuhax_manager.3dsx') then
 		RefreshTopUI()
 	else
 		Graphics.fillRect(0, 412, 0, 240, colours.background_grey)
 	end
 	Graphics.termBlend()
 	Graphics.initBlend(BOTTOM_SCREEN)
-	if #themes ~= 0 then
+	if #themes ~= 0 and System.doesFileExist('/3ds/menuhax_manager/menuhax_manager.3dsx') then
 		RefreshBottomUI()
+	elseif not System.doesFileExist('/3ds/menuhax_manager/menuhax_manager.3dsx') then
+		Graphics.fillRect(0, 320, 0, 240, colours.background_grey)
+		dialog_type = 'no_menuhax'
+		dialog_open = true
+		Graphics.drawImage(15, 31, no_menuhax_dialog)
 	else
 		Graphics.fillRect(0, 320, 0, 240, colours.background_grey)
 		dialog_type = 'no_themes'
